@@ -1,0 +1,63 @@
+Python string objects are immutable.
+Example:
+
+
+>>> a = 'tanim'
+>>> 'Address of a is:{}'.format(id(a))
+'Address of a is:64281536'
+>>> a = 'ahmed'
+>>> 'Address of a is:{}'.format(id(a))
+'Address of a is:64281600'
+
+
+In this example we can see that when we assign different value in a it doesn't modify.A new object is created.
+And it can't be modified.
+Example:
+
+>>> a[0] = 'c'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object does not support item assignment
+
+A error occurs.
+
+Comparing in list,it is mutable.
+
+Take a look in example:
+
+>>> li =[1,2,3]
+>>> 'Address of li is:{}'.format(id(li))
+'Address of li is:64306072'
+>>> li.append(4)
+>>> 'Address of li is:{}'.format(id(li))
+'Address of li is:64306072'
+
+
+/**********But in C++ string is mutable::**********/
+
+#include<iostream>
+using namespace std;
+int main()
+{
+
+  string a = "Tanim";
+  cout << & a <<endl;
+  a = "ahmed";
+  a[0] = 'd';
+  cout << a <<endl;
+  cout << & a<<endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
